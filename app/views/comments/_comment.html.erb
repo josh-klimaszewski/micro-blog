@@ -1,16 +1,21 @@
+<div class="comments-container">
+  <div>
+    <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+    </p>
 
-<p>
-<strong>Commenter:</strong>
-<%= comment.commenter %>
-</p>
+    <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+    </p>
+  </div>
 
-<p>
-<strong>Comment:</strong>
-<%= comment.body %>
-</p>
-
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+  <p>
+    <%= link_to [comment.article, comment],
+                method: :delete,
+                data: { confirm: 'Are you sure?' } do %>
+      <i class="material-icons">delete_forever</i>
+    <% end %>
+  </p>
+</div>
