@@ -1,3 +1,27 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$font-stack: Helvetica, sans-serif;
+body {
+    font-family: $font-stack;
+    box-sizing: border-box;
+    position: relative;
+}
+    .welcome-box {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 25%;
+        width: 50%;
+        height: 200px;
+        margin-top: 25%;
+        border: 1px solid black;
+    }
+        .welcome-box a {
+            text-decoration: none;
+            font-size: 200%;
+        }
+        .welcome-box a:hover {
+            font-size: 300%;
+        }
