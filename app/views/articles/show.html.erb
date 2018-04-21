@@ -1,19 +1,37 @@
+<div class="show-container">
+    <div class="show-nav-bar">
+        <p>
+            <%= @article.title %>
+        </p>
+        <div>
+            <%= link_to edit_article_path(@article) do %>
+                <i class="material-icons">edit</i>
+            <% end %>
+            <%= link_to articles_path do %>
+                <i class="material-icons">undo</i>
+            <% end %>
+        </div>
 
-<p>
-<strong>Title:</strong>
-<%= @article.title %>
-</p>
+    </div>
+    <div class="post-container">
+        <p>
+        <strong>Title:</strong>
+        <%= @article.title %>
+        </p>
 
-<p>
-<strong>Text:</strong>
-<%= @article.text %>
-</p>
+        <p>
+        <strong>Text:</strong>
+        <%= @article.text %>
+        </p>
+    </div>
+    <div class="comments-container">
+        <h2>Comments</h2>
+        <%= render @article.comments %>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+        <h2>Add a comment:</h2>
+        <%= render 'comments/form' %>
+    </div>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+    <%= link_to 'Edit', edit_article_path(@article) %> |
+    <%= link_to 'Back', articles_path %>
+</div>
