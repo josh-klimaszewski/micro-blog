@@ -1,21 +1,10 @@
 <div class="comments-container">
-  <div>
-    <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-    </p>
-
-    <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-    </p>
-  </div>
-
-  <p>
-    <%= link_to [comment.article, comment],
-                method: :delete,
-                data: { confirm: 'Are you sure?' } do %>
-      <i class="material-icons">delete_forever</i>
-    <% end %>
-  </p>
+  <strong>Comment from <%= comment.commenter %></strong></br>
+  <p><%= comment.body %></p>
+  <%= link_to [comment.article, comment],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } do %>
+    <i class="material-icons">delete_forever</i>
+  <% end %>
+  
 </div>

@@ -1,12 +1,18 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$font-stack: Helvetica, sans-serif;
+$font-1: 'Cute Font', cursive;
+$font-2: 'Do Hyeon', sans-serif;
+$apple-red: #D90429;
+$red: #EF233C;
+$white: #EDF2F4;
+$gray: #8D99AE;
+$gunmetal: #2B2D42;
 body {
-    font-family: $font-stack;
     box-sizing: border-box;
     position: relative;
-}
+    background-color: $gray;
+
     .welcome-box {
         position: absolute;
         display: flex;
@@ -16,12 +22,70 @@ body {
         width: 50%;
         height: 200px;
         margin-top: 25%;
-        border: 1px solid black;
-    }
-        .welcome-box a {
+        border: 5px solid black;
+        border-radius: 10px;
+        background-color: $red;
+    
+        a {
             text-decoration: none;
-            font-size: 200%;
+            font-size: 4em;
+            font-family: $font-1;
+            color: $white;
         }
-        .welcome-box a:hover {
-            font-size: 300%;
+        a:hover {
+            color: $gunmetal;
         }
+    }
+    .circle-box {
+    width: 100%;
+    height: 800px;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+        .circles {
+            width: inherit;
+            height: inherit;
+            position: relative;
+            .circle-1 {
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                
+                border-radius: 50%;
+                right: 2%;
+                bottom: 40%;
+                background-color: $gunmetal;
+            }
+            .circle-2 {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                
+                border-radius: 50%;
+                right: 5%;
+                bottom: 25%;
+                background-color: $white;
+            }
+            .circle-3 {
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                background-color: $white;
+                border-radius: 50%;
+                right: 25%;
+                top: 5%;
+            }
+            .circle-4 {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: $gunmetal;
+                border-radius: 50%;
+                right: 5%;
+                bottom: 25%;
+            }
+        }
+    }
+}

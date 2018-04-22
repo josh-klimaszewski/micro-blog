@@ -1,6 +1,17 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$apple-red: #D90429;
+$red: #EF233C;
+$white: #EDF2F4;
+$gray: #8D99AE;
+$gunmetal: #2B2D42;
+$font-1: 'Cute Font', cursive;
+$font-2: 'Do Hyeon', sans-serif;
+
+
+
 @mixin nav {
     display: flex;
     justify-content: space-between;
@@ -8,47 +19,66 @@
     height: 30px;
     padding: 1%;
     margin-bottom: 2%;
-    border: 1px solid black;
+    border: 5px solid $gunmetal;
+    border-radius: 10px;
+    background-color: $red;
+    a, i, p {
+        text-decoration: none;
+        color: $gunmetal;
+    }
+    a, p {
+        font-family: $font-1;
+        font-size: 2.5em;
+    }
+    a:hover, i:hover {
+        color: $white;
+    }
+    
 }
 .container {
     margin: 0 5%;
 
     .nav-bar {
         @include nav;
-    
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        a:hover {
-            color: red;
-        }
     }   
     table {
-        border: 1px solid black;
+        border: 5px solid $gunmetal;
+        border-radius: 5px;
+        background-color: $white;
         width: 100%;
     
         tr {
             display: flex;
             justify-content: space-between;
-            border: 1px solid black;
+            border: 5px solid $gunmetal;
+            border-radius: 5px;
+            background-color: $red;
+            
             padding: 2%;
             margin: 2%;
         
             th {
                 width: 33%;
+                font-family: $font-1;
+                color: $gunmetal;
+                font-size: 3em;
             }
             td {
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
                 width: 33%;
-            
+                font-family: $font-2;
+            }
+            .action-box {
+                justify-content: flex-end;
                 i {
-                    color: black;
+                    color: $gunmetal;
                 }
                 i:hover {
-                    color: red;
+                    color: $white;
                 }
+                
             }
         }
     }
@@ -57,59 +87,97 @@
     margin: 0 5%;
     .new-nav-bar {
         @include nav;
-        a:hover {
-            color: red;
-        }
     }
+
 }
+
 form {
-    border: 1px solid black;
+    border: 5px solid $gunmetal;
+    border-radius: 5px;
+    background-color: $white;
     padding: 2%;
     p {
+        font-family: $font-1;
+        font-size: 2em;
         display: flex;
         input, textarea {
+            border: 5px solid $gunmetal;
+            border-radius: 2px;
+            background-color: $white;
+            font-family: $font-2;
             width: 85%;
             margin-left: 5%;
         }
+        input:focus, textarea:focus {
+            outline: none;
+        }
+        input {
+            font-size: 1em;
+        }
         textarea {
+            font-size: 0.5em;
             height: 200px;
         }
     }
-    .submit-button {
-        width: 120px;
-        height: 30px;
+    .submit-button input{
+        width: 150px;
+        height: 50px;
         margin: 0 auto;
+        font-size: 0.5em;
+        border: 2px solid $gunmetal;
+        border-radius: 2px;
+        background-color: $red;
+        
+    }
+    .submit-button input:hover {
+        background-color: $apple-red;
     }
 }
 .show-container {
     margin: 0 5%;
     .show-nav-bar {
         @include nav;
-        div {
-            display: flex;
-        }
-        a:hover {
-            color: red;
-        }
+        
     }
     .post-container {
-        border: 1px solid black;
+        border: 5px solid $gunmetal;
+        border-radius: 5px;
+        background-color: $white;
         padding: 2%;
         margin: 2% 0;
+        strong {
+            font-family: $font-1;
+            font-size: 2em;
+        }
+        p {
+            font-family: $font-2;
+        }
     }
     .comments-container {
-        border: 1px solid black;
+        border: 5px solid $gunmetal;
+        border-radius: 5px;
+        background-color: $white;
         padding: 2%;
         margin: 2% 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        strong {
+            font-family: $font-1;
+            font-size: 2em;
+        }
+        p {
+            flex-grow: 2;
+            font-family: $font-2;
+            margin-left: 5%;
+        }
+
         i {
             text-decoration: none;
-            color: black;
+            color: $gunmetal;
         }
         i:hover {
-            color: red;
+            color: $red;
         }
     }
 }

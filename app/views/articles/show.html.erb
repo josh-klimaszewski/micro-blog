@@ -1,8 +1,7 @@
 <div class="show-container">
     <div class="show-nav-bar">
-        <p>
-            <%= @article.title %>
-        </p>
+        <%= link_to 'micro-blog', articles_path %>
+    
         <div>
             <%= link_to edit_article_path(@article) do %>
                 <i class="material-icons">edit</i>
@@ -12,13 +11,14 @@
             <% end %>
         </div>
     </div>
-    <strong>Post</strong>
+    
     <div class="post-container">
+        <strong><%= @article.title %></strong>
         <p>
             <%= @article.text %>
         </p>
     </div>
-    <strong>Comments</strong></br>
+    
     <%= render @article.comments %>
     <strong>Add a comment:</p>
     <%= render 'comments/form' %>

@@ -10,14 +10,14 @@
     <tr>
       <th>Title</th>
       <th>Text</th>
-      <th>Actions</th>
+      <th></th>
     </tr>
   
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
         <td><%= article.text %></td>
-        <td>
+        <td class="action-box">
           <%= link_to article_path(article) do %>
             <i class="material-icons">remove_red_eye</i>
           <% end %>
